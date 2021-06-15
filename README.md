@@ -1,13 +1,13 @@
 # ✏️ KODBLOGUM
 
 
+
 Kodblogum, HTML, CSS, PHP ve SQL dilleri hakkında içerikler 
 paylaşabileceğiniz, aynı zamanda başkalarının da bu diller hakkındaki içeriklerini 
 görebileceğiniz bir blogdur.
 
-* Siteye buradan ulaşabilirsiniz.
-👉 (http://kodblogum.6te.net/) 👈
-
+* Siteye 👉[buradan](http://kodblogum.6te.net/)👈 ulaşabilirsiniz.
+  
 
 
 # Kullanılan Teknoljiler
