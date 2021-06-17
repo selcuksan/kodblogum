@@ -2,7 +2,7 @@
 session_start();
 include("db.php");
 include("validateUser.php");
-include("slugifi.php");
+include("random.php");
 $username  = "";
 $email  = "";
 $password  = "";
@@ -114,7 +114,7 @@ $rows = $result->fetch_all();
 $sql2 = "SELECT category_name FROM categories";
 $result2 = mysqli_query($conn, $sql2);
 $rows2 = $result2->fetch_all();
-
+// write($rows2);
 if (isset($_GET['url'])) {
     global $conn;
 
@@ -189,14 +189,17 @@ if (isset($_GET['postedit'])) {
     global $conn;
     $postedit = $_GET['postedit'];
 
-    $sql = "SELECT post_title, post_url, users.user_name,
+    $sql = "SELECT post_title,
+    category_name, post_url, users.user_name,
     post_content FROM posts join users on users.user_id = posts.post_user_id
+    join categories on categories.category_id = posts.post_category_id
     where post_url = '$postedit'";
     $result = mysqli_query($conn, $sql);
     $row = $result->fetch_assoc();
     // write($row);
 
 
+    $category_name = $row["category_name"];
     $post_content = $row["post_content"];
     $post_title = $row["post_title"];
     $post_url = $row["post_url"];

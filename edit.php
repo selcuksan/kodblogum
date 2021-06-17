@@ -40,7 +40,9 @@ if ($_SESSION['username'] != $user_name) {
                     <option disabled>Seçin</option>
                     <?php if (count($rows2) > 0) : ?>
                         <?php foreach ($rows2 as $row) : ?>
-                            <option style="font-weight: 100;" value="<?php echo  $row[0]; ?>"><?php echo  $row[0]; ?></option>
+                            <option <?php if($category_name == $row[0]): ?>
+                            selected
+                            <?php endif; ?> style="font-weight: 100;" value="<?php echo  $row[0]; ?>"><?php echo  $row[0]; ?></option>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </select>
