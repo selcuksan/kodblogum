@@ -10,7 +10,7 @@ görebileceğiniz bir blogdur.
   
 
 
-# Kullanılan Teknoljiler
+# Kullanılan Teknolojiler
 
 - [HTML5](https://www.w3schools.com/html/default.asp)
 - [CSS3](https://www.w3schools.com/css/default.asp)
